@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FinanceLedger/static/css/main.7acaea2f.css",
+    "main.js": "/FinanceLedger/static/js/main.99d537a4.js",
+    "index.html": "/FinanceLedger/index.html",
+    "main.7acaea2f.css.map": "/FinanceLedger/static/css/main.7acaea2f.css.map",
+    "main.99d537a4.js.map": "/FinanceLedger/static/js/main.99d537a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.99d537a4.js"
+  ]
+}

@@ -1,5 +1,4 @@
 import { Container } from 'helpers/common-styles/Container';
-// import People from '../../images/home/people.jpg';
 
 import { HomeSection, HomeBox, ReadMore, P, H2 } from './Home.styled';
 
@@ -8,8 +7,6 @@ const Home = () => {
     <HomeSection>
       <Container>
         <HomeBox>
-          {/* <img src={People} alt="" width={670} height={460} /> */}
-
           <P>What you are looking for</P>
           <H2>We provide bespoke solutions</H2>
           <P>

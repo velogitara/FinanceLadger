@@ -6,7 +6,7 @@ export const HomeSection = styled.div`
   padding: 0 28px;
   /* min-height: 460px; */
   background: url(${People}), #28a745;
-  background-size: contain;
+  background-size: 50% 100%;
   background-repeat: no-repeat;
 `;
 
@@ -36,5 +36,6 @@ export const H2 = styled.h2`
 `;
 export const ReadMore = styled(ReadMoreBtn)`
   display: inline-flex;
+  align-self: start;
   border: white solid 1px;
 `;

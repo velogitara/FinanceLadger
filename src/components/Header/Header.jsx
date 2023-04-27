@@ -1,37 +1,21 @@
-// import { Container } from 'helpers';
-// import Logo from '../Logo';
-// import Navigation from '../Navigation';
-// import ThemeButton from 'components/ThemeButton';
-// import { constants } from 'constants/constants';
-// import { HeaderBox, MenuButton, MenuIcon } from './Header.styled';
+import { Container } from 'helpers/common-styles/Container';
 
-// const { icons } = constants;
+import Logo from '../Logo';
+import Navigation from '../Navigation';
+import Hero from '../Hero';
+import { HeaderBox, HeaderSection } from './Header.styled';
 
-const Header = ({ onWidth, onOpenMenu, onCloseMenu }) => {
+const Header = () => {
   return (
-    <header>
-      {/* <Container>
+    <HeaderSection>
+      <Container>
         <HeaderBox>
           <Logo />
-          {onWidth >= 768 && (
-            <Navigation onWidth={onWidth} onCloseMenu={onCloseMenu} />
-          )}
-          <ThemeButton />
-          {onWidth < 1280 && (
-            <MenuButton
-              type="button"
-              title="Toggle menu"
-              onClick={() => onOpenMenu()}
-            >
-              <MenuIcon aria-label="menu icon">
-                <use href={`${icons}#icon-menu`}></use>
-              </MenuIcon>
-            </MenuButton>
-          )}
+          <Navigation />
         </HeaderBox>
-      </Container> */}
-      <p>Hello</p>
-    </header>
+        <Hero />
+      </Container>
+    </HeaderSection>
   );
 };
 

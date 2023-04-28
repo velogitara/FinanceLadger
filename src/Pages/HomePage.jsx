@@ -1,7 +1,13 @@
-// import { Container } from 'helpers/common-styles/Container';
+import Cases from '../components/Cases';
 
 const HomePage = () => {
-  return <p>Some components on homepage in main</p>;
+  return (
+    <>
+      {/* <Container> */}
+      <Cases />
+      {/* </Container> */}
+    </>
+  );
 };
 
 export default HomePage;

@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 import { ReadMoreBtn } from 'components/Hero/Hero.styled';
 import People from '../../images/home/people.jpg';
+import People2x from '../../images/home/people@2x.jpg';
 
 export const HomeSection = styled.div`
   padding: 0 28px;
-  /* min-height: 460px; */
   background: url(${People}), #28a745;
   background-size: 50% 100%;
   background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .box {
+      background-image: url(${People2x});
+    }
+  }
 `;
 
 export const HomeBox = styled.div`
@@ -17,7 +25,6 @@ export const HomeBox = styled.div`
   padding: 80px 0 86px 20px;
   max-width: 50%;
 
-  /* background: #28a745; */
   font-weight: 400;
   color: #fff;
 `;

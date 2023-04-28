@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Showcase from '../../images/home/showcase@2x.jpg';
 
 export const HeaderSection = styled.div`
-  background-color: aliceblue;
   padding: 10px 28px 20px 28px;
 
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),

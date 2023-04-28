@@ -13,3 +13,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.pswp--custom-icon-colors {
+  --pswp-icon-color: #f9fff9;
+  --pswp-icon-color-secondary: #333;
+}
+/* .pswp__button--arrow--next {
+  right: 26%;
+}
+.pswp__button--arrow--prev {
+  left: 26%;
+}
+.pswp__button--close {
+  position: absolute;
+
+  left: 67%;
+}
+.pswp__top-bar {
+  top: 90%;
+} */

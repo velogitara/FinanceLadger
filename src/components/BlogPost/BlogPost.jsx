@@ -2,7 +2,7 @@ import { Container } from 'helpers/common-styles/Container';
 import { BlogSection, TextBox, P, H2, ReadBtn } from './BlogPost.styled';
 const BlogPost = () => {
   return (
-    <BlogSection>
+    <BlogSection id="Blog">
       <Container>
         <TextBox>
           <P>April 28 2023</P>

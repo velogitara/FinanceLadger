@@ -1,17 +1,15 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
-import Home from '..//Home';
+import { Suspense } from 'react';
+// import Header from '../Header/Header';
+// import Home from '..//Home';
 
-import { Main } from './SharedLayout.styled';
+// import { Main } from './SharedLayout.styled';
 
 const SharedLayout = () => {
   return (
     <>
-      <Header />
-      <Home />
-      <Main>
-        <Outlet />
-      </Main>
+      <Suspense fallback={<div>Loading...</div>}></Suspense>
+      <Outlet />
     </>
   );
 };

@@ -3,7 +3,7 @@ import { ReadMoreBtn } from 'components/Hero/Hero.styled';
 import People from '../../images/home/people.jpg';
 import People2x from '../../images/home/people@2x.jpg';
 
-export const HomeSection = styled.div`
+export const AboutSection = styled.div`
   padding: 0 28px;
   background: url(${People}), #28a745;
   background-size: 50% 100%;
@@ -18,7 +18,7 @@ export const HomeSection = styled.div`
   }
 `;
 
-export const HomeBox = styled.div`
+export const AboutBox = styled.div`
   display: flex;
   flex-direction: column;
   align-self: flex-end;

@@ -10,6 +10,9 @@ export const HeaderSection = styled.div`
 `;
 
 export const HeaderBox = styled.nav`
+  position: sticky;
+  top: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -5,7 +5,7 @@ import { CasesSection, TextBox, P, H2, Describe } from './Cases.styled';
 
 const Cases = () => {
   return (
-    <CasesSection>
+    <CasesSection id="Cases">
       <Container>
         <TextBox>
           <P>This is what we do</P>

@@ -7,7 +7,7 @@ import { HeaderBox, HeaderSection } from './Header.styled';
 
 const Header = () => {
   return (
-    <HeaderSection>
+    <HeaderSection id="Home">
       <Container>
         <HeaderBox>
           <Logo />

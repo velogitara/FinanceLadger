@@ -1,12 +1,12 @@
 import { Container } from 'helpers/common-styles/Container';
 
-import { HomeSection, HomeBox, ReadMore, P, H2 } from './Home.styled';
+import { AboutSection, AboutBox, ReadMore, P, H2 } from './About.styled';
 
-const Home = () => {
+const About = () => {
   return (
-    <HomeSection>
+    <AboutSection id="About">
       <Container>
-        <HomeBox>
+        <AboutBox>
           <P>What you are looking for</P>
           <H2>We provide bespoke solutions</H2>
           <P>
@@ -16,10 +16,10 @@ const Home = () => {
             doloribus iste maiores deleniti?
           </P>
           <ReadMore>Read More</ReadMore>
-        </HomeBox>
+        </AboutBox>
       </Container>
-    </HomeSection>
+    </AboutSection>
   );
 };
 
-export default Home;
+export default About;

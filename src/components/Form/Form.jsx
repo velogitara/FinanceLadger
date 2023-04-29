@@ -2,6 +2,12 @@ import { FormContainer, H2 } from './Form.styled';
 import { useFormik } from 'formik';
 
 const ContactForm = () => {
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -9,11 +15,13 @@ const ContactForm = () => {
     },
     onSubmit: values => {
       // alert(JSON.stringify(values, null, 2));
-      console.log(JSON.stringify(values, null, 2));
+      // console.log(JSON.stringify(values, null, 2));
+      console.log(encode({ 'form-name': 'contact', ...values }));
+
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: JSON.stringify(values, null, 2),
+        body: encode({ 'form-name': 'contact', ...values }),
       })
         .then(() => alert('Success!'))
         .catch(error => alert(error));

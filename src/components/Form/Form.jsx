@@ -2,6 +2,12 @@ import { FormContainer, H2 } from './Form.styled';
 import { useFormik } from 'formik';
 
 const ContactForm = () => {
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -9,10 +15,14 @@ const ContactForm = () => {
     },
     onSubmit: values => {
       // alert(JSON.stringify(values, null, 2));
+      console.log(JSON.stringify(values, null, 2));
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: JSON.stringify(values, null, 2),
+        body: encode({
+          'form-name': 'contact',
+          ...JSON.stringify(values, null, 2),
+        }),
       })
         .then(() => alert('Success!'))
         .catch(error => alert(error));
@@ -23,12 +33,11 @@ const ContactForm = () => {
       <H2>Request CallBack</H2>
       <form
         onSubmit={formik.handleSubmit}
-        name="contact v1"
-        method="post"
+        name="contact"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact v1" />
+        <input type="hidden" name="form-name" value="contact" />
         <div hidden>
           <input name="bot-field" />
         </div>

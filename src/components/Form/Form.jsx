@@ -1,29 +1,30 @@
 import { FormContainer, H2 } from './Form.styled';
-import { useFormik } from 'formik';
+// import { useFormik } from 'formik';
 
 const ContactForm = () => {
-  const formik = useFormik({
-    initialValues: {
-      firstName: '',
-      email: '',
-    },
-    onSubmit: values => {
-      // alert(JSON.stringify(values, null, 2));
-      console.log(JSON.stringify(values, null, 2));
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(values).toString(),
-      })
-        .then(() => alert('Success!'))
-        .catch(error => alert(error));
-    },
-  });
+  // const formik = useFormik({
+  //   initialValues: {
+  //     firstName: '',
+  //     email: '',
+  //   },
+  //   onSubmit: values => {
+  //     // alert(JSON.stringify(values, null, 2));
+  //     console.log(JSON.stringify(values, null, 2));
+  //     fetch('/', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //       body: new URLSearchParams(values).toString(),
+  //     })
+  //       .then(() => alert('Success!'))
+  //       .catch(error => alert(error));
+  //   },
+  // });
   return (
     <FormContainer>
       <H2>Request CallBack</H2>
       <form
-        onSubmit={formik.handleSubmit}
+        // onSubmit={formik.handleSubmit}
+        onSubmit="submit"
         name="contact"
         data-netlify="true"
         netlify="true"
@@ -39,8 +40,8 @@ const ContactForm = () => {
               id="firstName"
               type="text"
               name="firstName"
-              onChange={formik.handleChange}
-              value={formik.values.firstName}
+              // onChange={formik.handleChange}
+              // value={formik.values.firstName}
               placeholder="Enter your name"
             />
           </label>
@@ -52,8 +53,8 @@ const ContactForm = () => {
               name="email"
               id="email"
               placeholder="Enter email"
-              onChange={formik.handleChange}
-              value={formik.values.email}
+              // onChange={formik.handleChange}
+              // value={formik.values.email}
             />
           </label>
         </div>

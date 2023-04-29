@@ -8,7 +8,14 @@ const ContactForm = () => {
       email: '',
     },
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: JSON.stringify(values, null, 2),
+      })
+        .then(() => alert('Success!'))
+        .catch(error => alert(error));
     },
   });
   return (

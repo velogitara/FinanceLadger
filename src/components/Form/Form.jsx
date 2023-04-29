@@ -13,7 +13,7 @@ const ContactForm = () => {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(values).toString(),
+        body: JSON.stringify(values, null, 2),
       })
         .then(() => alert('Success!'))
         .catch(error => alert(error));
@@ -40,8 +40,8 @@ const ContactForm = () => {
               id="firstName"
               type="text"
               name="firstName"
-              // onChange={formik.handleChange}
-              // value={formik.values.firstName}
+              onChange={formik.handleChange}
+              value={formik.values.firstName}
               placeholder="Enter your name"
             />
           </label>
@@ -53,8 +53,8 @@ const ContactForm = () => {
               name="email"
               id="email"
               placeholder="Enter email"
-              // onChange={formik.handleChange}
-              // value={formik.values.email}
+              onChange={formik.handleChange}
+              value={formik.values.email}
             />
           </label>
         </div>

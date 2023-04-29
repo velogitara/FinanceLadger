@@ -21,7 +21,7 @@ const ContactForm = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
           'form-name': 'contact',
-          ...JSON.stringify(values, null, 2),
+          ...values,
         }),
       })
         .then(() => alert('Success!'))
@@ -35,6 +35,7 @@ const ContactForm = () => {
         onSubmit={formik.handleSubmit}
         name="contact"
         data-netlify="true"
+        netlify
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />

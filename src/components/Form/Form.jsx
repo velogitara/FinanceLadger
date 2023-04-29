@@ -8,14 +8,12 @@ const ContactForm = () => {
       email: '',
     },
     onSubmit: values => {
-      const formData = new FormData(values);
-
       // alert(JSON.stringify(values, null, 2));
       console.log(JSON.stringify(values, null, 2));
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(values).toString(),
       })
         .then(() => alert('Success!'))
         .catch(error => alert(error));
@@ -28,7 +26,7 @@ const ContactForm = () => {
         onSubmit={formik.handleSubmit}
         name="contact"
         data-netlify="true"
-        netlify
+        netlify="true"
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />

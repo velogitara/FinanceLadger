@@ -2,27 +2,20 @@ import { FormContainer, H2 } from './Form.styled';
 import { useFormik } from 'formik';
 
 const ContactForm = () => {
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-  };
-
   const formik = useFormik({
     initialValues: {
       firstName: '',
       email: '',
     },
     onSubmit: values => {
+      const formData = new FormData(values);
+
       // alert(JSON.stringify(values, null, 2));
       console.log(JSON.stringify(values, null, 2));
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
-          ...values,
-        }),
+        body: new URLSearchParams(formData).toString(),
       })
         .then(() => alert('Success!'))
         .catch(error => alert(error));

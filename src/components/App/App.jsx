@@ -4,7 +4,8 @@ import { Application } from './App.styled';
 import { GlobalStyle } from '../../helpers/GlobalStyled';
 
 import SharedLayout from '../SharedLayout/SharedLayout';
-import HomePage from 'Pages/HomePage';
+import HomePage from 'Pages/HomePage/HomePage';
+import SubmissionPage from 'Pages/SuccessfulSubmission';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="/success" element={<SubmissionPage />}></Route>
         </Route>
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>

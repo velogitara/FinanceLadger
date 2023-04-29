@@ -16,7 +16,7 @@ const ContactForm = () => {
     onSubmit: (values, e) => {
       // alert(JSON.stringify(values, null, 2));
       // console.log(JSON.stringify(values, null, 2));
-      console.log(encode({ 'form-name': 'contact', ...values }));
+      // console.log(encode({ 'form-name': 'contact', ...values }));
 
       fetch('/', {
         method: 'POST',
@@ -25,15 +25,15 @@ const ContactForm = () => {
       })
         .then(() => alert('Success!'))
         .catch(error => alert(error));
-      e.preventDefault();
+      // e.preventDefault();
     },
   });
   return (
     <FormContainer>
       <H2>Request CallBack</H2>
       <form
+        action="/success"
         onSubmit={formik.handleSubmit}
-        // onSubmit="submit"
         name="contact"
         data-netlify="true"
         netlify="true"

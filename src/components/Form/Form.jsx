@@ -13,7 +13,7 @@ const ContactForm = () => {
       firstName: '',
       email: '',
     },
-    onSubmit: values => {
+    onSubmit: (values, e) => {
       // alert(JSON.stringify(values, null, 2));
       // console.log(JSON.stringify(values, null, 2));
       console.log(encode({ 'form-name': 'contact', ...values }));
@@ -25,6 +25,7 @@ const ContactForm = () => {
       })
         .then(() => alert('Success!'))
         .catch(error => alert(error));
+      e.preventDefault();
     },
   });
   return (

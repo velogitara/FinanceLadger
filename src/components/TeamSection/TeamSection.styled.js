@@ -1,25 +1,24 @@
 import styled from 'styled-components';
 
-export const CasesSection = styled.div`
-  padding: 80px 28px;
+export const Section = styled.div`
+  padding: 80px 28px 84px 28px;
 `;
+
 export const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
-
 export const P = styled.p`
-  font-size: 18px;
-  line-height: 1.3;
+  margin-bottom: 24px;
 
-  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.35;
 `;
 export const H2 = styled.h2`
-  font-size: 40px;
-  font-weight: 400;
   margin-bottom: 24px;
-`;
-export const Describe = styled(P)`
-  margin-bottom: 36px;
+
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 1.35;
 `;

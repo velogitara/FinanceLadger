@@ -1,4 +1,3 @@
-// import SimpleGallery from 'helpers/SimpleGallery/SimpleGallery';
 import 'photoswipe/dist/photoswipe.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import { GridBox } from './CasesGallery.styled';

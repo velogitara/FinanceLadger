@@ -16,6 +16,7 @@ export const LogoContainer = styled.div`
   :hover {
     transform: scale(1.05);
     letter-spacing: 0.2;
+    cursor: default;
   }
 `;
 

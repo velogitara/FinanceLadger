@@ -1,8 +1,14 @@
-import { FormContainer, H2 } from './Form.styled';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {
+  FormContainer,
+  H2,
+  NameInput,
+  EmailInput,
+  ButtonSubmit,
+} from './Form.styled';
 
 const ContactForm = () => {
   const navigate = useNavigate();
@@ -60,7 +66,7 @@ const ContactForm = () => {
         </div>
         <div>
           <label htmlFor="firstName">
-            <input
+            <NameInput
               id="firstName"
               type="text"
               name="firstName"
@@ -72,7 +78,7 @@ const ContactForm = () => {
         </div>
         <div>
           <label htmlFor="email">
-            <input
+            <EmailInput
               type="email"
               name="email"
               id="email"
@@ -82,7 +88,7 @@ const ContactForm = () => {
             />
           </label>
         </div>
-        <button type="submit">Send</button>
+        <ButtonSubmit type="submit">Send</ButtonSubmit>
       </form>
       <ToastContainer />
     </FormContainer>

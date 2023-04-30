@@ -66,7 +66,7 @@ export const Svg = styled.svg`
   margin-left: 25px;
   width: 35px;
   height: 35px;
-  opacity: 0.6;
+  opacity: 1;
 
   cursor: pointer;
 

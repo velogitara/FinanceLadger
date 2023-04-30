@@ -14,11 +14,8 @@ export const HeaderBox = styled.nav`
 
 export const HeaderInner = styled.div`
   @media screen and (min-width: 768px) {
-    /* padding: 0 28px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex-direction: row; */
-    /* min-width: 704px; */
   }
 `;

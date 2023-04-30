@@ -1,18 +1,23 @@
 import styled from 'styled-components';
-import Contact from '../../images/home/contact.jpg';
-import Contact_2x from '../../images/home/contact@2x.jpg';
+import { Container } from 'helpers/common-styles/Container';
+
+export const MainContainer = styled(Container)`
+  padding: 0;
+`;
 
 export const ContactSection = styled.div`
-  /* padding: 0 28px; */
-  background: url(${Contact}), #f4f4f4;
-  background-size: 50% 100%;
-  background-repeat: no-repeat;
+  width: 100%;
+`;
+export const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .box {
-      background-image: url(${Contact_2x});
-    }
-  }
+  background: #f4f4f4;
+
+  overflow: hidden;
+  object-fit: cover;
+`;
+export const ContactImage = styled.div`
+  width: 50%;
 `;

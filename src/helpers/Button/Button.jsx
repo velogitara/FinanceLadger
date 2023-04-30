@@ -1,8 +1,8 @@
-const ReadMoreBtn = img => {
+const Button = ({ type, content }) => {
   return (
     <>
-      <button> Read More</button>
+      <button type={type}> {content}</button>
     </>
   );
 };
-export default ReadMoreBtn;
+export default Button;

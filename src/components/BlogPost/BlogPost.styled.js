@@ -47,5 +47,7 @@ export const ReadBtn = styled(ReadMoreBtn)`
   align-self: start;
   border: white solid 1px;
   :hover {
+    color: #0284d0;
+    background: #f4f4f4;
   }
 `;

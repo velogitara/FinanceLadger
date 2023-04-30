@@ -41,7 +41,6 @@ const ContactForm = () => {
           navigate('/success', { replace: true });
         })
         .catch(error => alert(error));
-      // e.preventDefault();
     },
   });
   return (

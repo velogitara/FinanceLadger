@@ -4,7 +4,7 @@ import { ContactSection } from './CallbackSection.styled';
 
 const CallbackSection = () => {
   return (
-    <ContactSection>
+    <ContactSection id="Contact">
       <Container>
         <ContactForm />
       </Container>

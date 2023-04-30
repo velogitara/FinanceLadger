@@ -1,6 +1,7 @@
 import { Container } from 'helpers/common-styles/Container';
 
 import { AboutSection, AboutBox, ReadMore, P, H2 } from './About.styled';
+import ArrowSvg from 'helpers/common-styles/ArrowSvg';
 
 const About = () => {
   return (
@@ -15,7 +16,10 @@ const About = () => {
             harum illum dolore explicabo ab dolores itaque rerum temporibus
             doloribus iste maiores deleniti?
           </P>
-          <ReadMore>Read More</ReadMore>
+          <ReadMore>
+            <ArrowSvg />
+            Read More
+          </ReadMore>
         </AboutBox>
       </Container>
     </AboutSection>

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "FinanceLedger App",
+  "name": "FinanceLedger test app by Oleksandr Pavlishchev",
   "icons": [
     {
       "src": "favicon.ico",

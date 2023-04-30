@@ -3,7 +3,7 @@ import Contact from '../../images/home/contact.jpg';
 import Contact_2x from '../../images/home/contact@2x.jpg';
 
 export const ContactSection = styled.div`
-  padding: 0 28px;
+  /* padding: 0 28px; */
   background: url(${Contact}), #f4f4f4;
   background-size: 50% 100%;
   background-repeat: no-repeat;

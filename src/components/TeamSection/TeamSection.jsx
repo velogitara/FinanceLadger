@@ -1,10 +1,10 @@
 import { Container } from 'helpers/common-styles/Container';
-import { P, H2, Section, TextBox } from './TeamSection.styled';
+import { P, H2, TeamSectionWrapper, TextBox } from './TeamSection.styled';
 import TeamGallery from 'components/TeamGallery/TeamGallery';
 
 const TeamSection = () => {
   return (
-    <Section>
+    <TeamSectionWrapper>
       <Container>
         <TextBox>
           <P>Who we are</P>
@@ -16,7 +16,7 @@ const TeamSection = () => {
         </TextBox>
         <TeamGallery />
       </Container>
-    </Section>
+    </TeamSectionWrapper>
   );
 };
 export default TeamSection;

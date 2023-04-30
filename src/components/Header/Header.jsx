@@ -1,21 +1,39 @@
-import { Container } from 'helpers/common-styles/Container';
-
+import { useState, useEffect } from 'react';
 import Logo from '../Logo';
 import Navigation from '../Navigation';
-import Hero from '../Hero';
-import { HeaderBox, HeaderSection } from './Header.styled';
-
+import { HeaderBox, HeaderInner } from '../../components/Header/Header.styled';
+import { Container } from 'helpers/common-styles/Container';
 const Header = () => {
+  const [scrollTop, setScrollTop] = useState(false);
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = event => {
+      setScrollTop(window.scrollY);
+      setActive(true);
+    };
+    const handleScrollReset = () => {
+      setActive(false);
+      setScrollTop(window.scrollY);
+    };
+
+    setTimeout(() => {
+      window.addEventListener('scroll', handleScroll);
+    }, 3000);
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollReset);
+    };
+  }, [active]);
   return (
-    <HeaderSection id="Home">
+    <HeaderBox onScroll={() => setActive(!active)} active={scrollTop}>
       <Container>
-        <HeaderBox>
+        <HeaderInner>
           <Logo />
           <Navigation />
-        </HeaderBox>
-        <Hero />
+        </HeaderInner>
       </Container>
-    </HeaderSection>
+    </HeaderBox>
   );
 };
 

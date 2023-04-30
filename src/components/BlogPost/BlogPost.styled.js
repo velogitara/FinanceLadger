@@ -4,7 +4,6 @@ import Blog from '../../images/home/blog.jpg';
 import Blog2x from '../../images/home/blog@2x.jpg';
 
 export const BlogSection = styled.div`
-  padding: 0 28px;
   background: url(${Blog}), #0284d0;
   background-size: 50% 100%;
   background-repeat: no-repeat;

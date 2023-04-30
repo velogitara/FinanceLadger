@@ -1,6 +1,6 @@
 import 'photoswipe/dist/photoswipe.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
-import { GridBox } from './CasesGallery.styled';
+import { GridBox, Img } from './CasesGallery.styled';
 
 import cases1 from '../../images/cases/cases1.jpg';
 import cases1_2x from '../../images/cases/cases1@2x.jpg';
@@ -78,7 +78,7 @@ const CasesGallery = () => {
           height="600"
         >
           {({ ref, open }) => (
-            <img
+            <Img
               style={smallItemStyles}
               ref={ref}
               onClick={open}
@@ -95,7 +95,7 @@ const CasesGallery = () => {
           height="600"
         >
           {({ ref, open }) => (
-            <img
+            <Img
               style={smallItemStyles}
               ref={ref}
               onClick={open}
@@ -112,7 +112,7 @@ const CasesGallery = () => {
           height="600"
         >
           {({ ref, open }) => (
-            <img
+            <Img
               style={smallItemStyles}
               ref={ref}
               onClick={open}
@@ -129,7 +129,7 @@ const CasesGallery = () => {
           height="600"
         >
           {({ ref, open }) => (
-            <img
+            <Img
               style={smallItemStyles}
               ref={ref}
               onClick={open}
@@ -146,7 +146,7 @@ const CasesGallery = () => {
           height="600"
         >
           {({ ref, open }) => (
-            <img
+            <Img
               style={smallItemStyles}
               ref={ref}
               onClick={open}
@@ -163,7 +163,7 @@ const CasesGallery = () => {
           height="600"
         >
           {({ ref, open }) => (
-            <img
+            <Img
               style={smallItemStyles}
               ref={ref}
               onClick={open}
@@ -180,7 +180,7 @@ const CasesGallery = () => {
           height="600"
         >
           {({ ref, open }) => (
-            <img
+            <Img
               style={smallItemStyles}
               ref={ref}
               onClick={open}
@@ -197,7 +197,7 @@ const CasesGallery = () => {
           height="600"
         >
           {({ ref, open }) => (
-            <img
+            <Img
               style={smallItemStyles}
               ref={ref}
               onClick={open}

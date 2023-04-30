@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CasesSection = styled.div`
-  padding: 80px 28px;
+  padding: 80px 0;
 `;
 export const TextBox = styled.div`
   display: flex;

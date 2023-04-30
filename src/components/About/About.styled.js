@@ -4,7 +4,6 @@ import People from '../../images/home/people.jpg';
 import People2x from '../../images/home/people@2x.jpg';
 
 export const AboutSection = styled.div`
-  padding: 0 28px;
   background: url(${People}), #28a745;
   background-size: 50% 100%;
   background-repeat: no-repeat;
@@ -22,8 +21,10 @@ export const AboutBox = styled.div`
   display: flex;
   flex-direction: column;
   align-self: flex-end;
-  padding: 80px 0 86px 20px;
+
   max-width: 50%;
+  margin-left: auto;
+  padding: 80px 0 86px 20px;
 
   font-weight: 400;
   color: #fff;
@@ -45,6 +46,10 @@ export const ReadMore = styled(ReadMoreBtn)`
   display: inline-flex;
   align-self: start;
   border: white solid 1px;
+
+  transition: background-color 250ms linear, color 250 linear;
   :hover {
+    color: #28a745;
+    background-color: #f4f4f4;
   }
 `;

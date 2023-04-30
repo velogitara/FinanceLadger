@@ -1,27 +1,24 @@
 import styled from 'styled-components';
-import Showcase from '../../images/home/showcase@2x.jpg';
-
-export const HeaderSection = styled.div`
-  padding: 10px 28px 20px 28px;
-
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${Showcase});
-  background-size: cover;
-`;
 
 export const HeaderBox = styled.nav`
-  position: sticky;
+  position: fixed;
   top: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 74px;
   width: 100%;
+  z-index: 10;
+  padding: 32px 0;
+
+  background-color: ${props => (props.active ? 'rgba(0,0,0,0.3)' : '')};
+  opacity: ${props => (props.active ? '0.8' : '')};
+  transition: background-color 0.5s linear, opacity 0.5s linear;
+`;
+
+export const HeaderInner = styled.div`
   @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
-  @media screen and (min-width: 1280px) {
+    /* padding: 0 28px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: row; */
+    /* min-width: 704px; */
   }
 `;

@@ -15,7 +15,7 @@ export const IconContainer = styled.div`
   /* position: relative;
   top: 50%; */
   /* transform: translate(0, -50%); */
-  padding: 20px 0;
+  padding: 20px 0 10px 0;
 
   a {
     display: inline-block;
@@ -42,5 +42,5 @@ export const Copyright = styled.div`
   color: #fff;
   font-size: 18px;
   line-height: 1.3;
-  margin-top: 10px;
+  margin-bottom: 20px;
 `;

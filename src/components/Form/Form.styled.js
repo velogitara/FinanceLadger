@@ -18,7 +18,8 @@ export const NameInput = styled.input`
   display: inline-flex;
   width: 100%;
   padding: 16px 8px;
-  margin-bottom: 25px;
+  margin-top: 31px;
+  /* margin-bottom: 25px; */
 
   font-size: 14px;
   line-height: 1.3;
@@ -27,13 +28,14 @@ export const EmailInput = styled.input`
   display: inline-flex;
   width: 100%;
   padding: 16px 8px;
-  margin-bottom: 40px;
+  margin-top: 25px;
 
   font-size: 14px;
   line-height: 1.3;
 `;
 export const ButtonSubmit = styled.button`
   padding: 16px 56px;
+  margin-top: 40px;
 
   font-size: 18px;
   line-height: 1.1;

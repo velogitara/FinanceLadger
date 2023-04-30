@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -24,6 +25,11 @@ const ContactForm = () => {
       firstName: '',
       email: '',
     },
+    validationSchema: Yup.object({
+      firstName: Yup.string().max(15, 'Must be 15 characters or less'),
+
+      email: Yup.string().email('Invalid email address').required('Required'),
+    }),
     onSubmit: (values, { resetForm }) => {
       // alert(JSON.stringify(values, null, 2));
       // console.log(JSON.stringify(values, null, 2));
@@ -59,6 +65,7 @@ const ContactForm = () => {
         data-netlify="true"
         netlify="true"
         data-netlify-honeypot="bot-field"
+        noValidate
       >
         <input type="hidden" name="form-name" value="contact" />
         <div hidden>
@@ -71,6 +78,7 @@ const ContactForm = () => {
               type="text"
               name="firstName"
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               value={formik.values.firstName}
               placeholder="Enter your name"
             />
@@ -84,11 +92,25 @@ const ContactForm = () => {
               id="email"
               placeholder="Enter email"
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               value={formik.values.email}
             />
+            {formik.touched.email && formik.errors.email ? (
+              <div style={{ color: 'red' }}>{formik.errors.email}</div>
+            ) : null}
           </label>
         </div>
-        <ButtonSubmit type="submit">Send</ButtonSubmit>
+        <ButtonSubmit
+          type="submit"
+          disabled={formik.isSubmitting}
+          style={
+            formik?.errors.email
+              ? { backgroundColor: 'gray' }
+              : { backgroundColor: '#28a745' }
+          }
+        >
+          Send
+        </ButtonSubmit>
       </form>
       <ToastContainer />
     </FormContainer>

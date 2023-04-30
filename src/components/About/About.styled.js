@@ -1,20 +1,23 @@
 import styled from 'styled-components';
 import { ReadMoreBtn } from 'components/Hero/Hero.styled';
-import People from '../../images/home/people.jpg';
-import People2x from '../../images/home/people@2x.jpg';
+import { Container } from 'helpers/common-styles/Container';
 
+export const AboutContainer = styled(Container)`
+  padding: 0;
+`;
 export const AboutSection = styled.div`
-  background: url(${People}), #28a745;
-  background-size: 50% 100%;
-  background-repeat: no-repeat;
+  background-color: #28a745;
+`;
+export const AboutPictureTextWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .box {
-      background-image: url(${People2x});
-    }
-  }
+  overflow: hidden;
+  object-fit: cover;
+`;
+export const Picture = styled.picture`
+  width: 50%;
 `;
 
 export const AboutBox = styled.div`
@@ -23,7 +26,7 @@ export const AboutBox = styled.div`
   align-self: flex-end;
 
   max-width: 50%;
-  margin-left: auto;
+  /* margin-left: auto; */
   padding: 80px 0 86px 20px;
 
   font-weight: 400;

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-
+import { MsgBox, Btn } from './SuccessfulSubmission.styled';
 const SubmissionPage = () => {
   const navigate = useNavigate();
 
@@ -7,12 +7,12 @@ const SubmissionPage = () => {
     navigate('/', { replace: true });
   };
   return (
-    <div>
-      Thank you! Your form submission has been received
-      <button type="button" onClick={handleClick}>
-        Go back
-      </button>
-    </div>
+    <MsgBox>
+      <h2>Thank you! Your form submission has been received</h2>
+      <Btn type="button" onClick={handleClick}>
+        Go back!
+      </Btn>
+    </MsgBox>
   );
 };
 export default SubmissionPage;

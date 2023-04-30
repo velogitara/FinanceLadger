@@ -36,7 +36,11 @@ const TeamGallery = () => {
             <Overlay>
               <IconContainer>
                 {icons.map(id => {
-                  return <Icon key={id} id={id} />;
+                  return (
+                    <a href="##">
+                      <Icon key={id} id={id} />
+                    </a>
+                  );
                 })}
               </IconContainer>
             </Overlay>

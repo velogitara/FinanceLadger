@@ -1,21 +1,23 @@
 import styled from 'styled-components';
 import { ReadMoreBtn } from 'components/Hero/Hero.styled';
-import Blog from '../../images/home/blog.jpg';
-import Blog2x from '../../images/home/blog@2x.jpg';
+import { Container } from 'helpers/common-styles/Container';
 
 export const BlogSection = styled.div`
-  background: url(${Blog}), #0284d0;
-  background-size: 50% 100%;
-  background-repeat: no-repeat;
-  background-position: right;
+  background: #0284d0;
+`;
+export const BlogContainer = styled(Container)`
+  padding: 0;
+`;
+export const BlogPictureTextWrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .box {
-      background-image: url(${Blog2x});
-    }
-  }
+  overflow: hidden;
+  object-fit: cover;
+`;
+export const Picture = styled.picture`
+  /* width: 50%; */
 `;
 export const TextBox = styled.div`
   display: flex;

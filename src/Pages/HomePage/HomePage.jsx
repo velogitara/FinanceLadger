@@ -4,6 +4,7 @@ import BlogPost from 'components/BlogPost';
 import CallbackSection from 'components/CallbackSection/CallbackSection';
 import About from '../../components/About';
 import Hero from 'components/Hero/Hero';
+import Footer from 'components/Footer';
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <BlogPost />
       <TeamSection />
       <CallbackSection />
+      <Footer />
     </>
   );
 };

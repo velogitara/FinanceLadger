@@ -13,9 +13,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="success" element={<SubmissionPage />} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route>
+        <Route path="success" element={<SubmissionPage />} />
       </Routes>
       <GlobalStyle />
     </Application>

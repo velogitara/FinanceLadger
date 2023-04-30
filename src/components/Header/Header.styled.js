@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderBox = styled.nav`
+export const HeaderBox = styled.header`
   position: fixed;
   top: 0;
   width: 100%;

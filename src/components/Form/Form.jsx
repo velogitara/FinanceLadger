@@ -31,23 +31,17 @@ const ContactForm = () => {
       email: Yup.string().email('Invalid email address').required('Required'),
     }),
     onSubmit: (values, { resetForm }) => {
-      // alert(JSON.stringify(values, null, 2));
-      // console.log(JSON.stringify(values, null, 2));
-      // console.log(encode({ 'form-name': 'contact', ...values }));
-
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'contact', ...values }),
       })
         .then(response => {
-          console.log(response);
           if (response.status !== 200) {
             resetForm();
             toast.error('Sorry, some problem with request!', {
               position: toast.POSITION.TOP_CENTER,
             });
-            // throw Error();
             return;
           }
           navigate('/success', { replace: true });

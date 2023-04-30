@@ -1,7 +1,13 @@
 import { Container } from 'helpers/common-styles/Container';
 import sprite from '../../images/SocialIcons/sprite.svg';
 
-import { IconContainer, Svg, FooterSection, Copyright } from './Footer.styled';
+import {
+  IconContainer,
+  Svg,
+  FooterSection,
+  Copyright,
+  FooterWrapper,
+} from './Footer.styled';
 
 const Footer = () => {
   const icons = ['Facebook', 'Twitter', 'Youtube', 'Instagram'];
@@ -15,16 +21,18 @@ const Footer = () => {
   return (
     <FooterSection>
       <Container>
-        <IconContainer>
-          {icons.map(id => {
-            return (
-              <a href="##">
-                <Icon key={id} id={id} />
-              </a>
-            );
-          })}
+        <FooterWrapper>
+          <IconContainer>
+            {icons.map(id => {
+              return (
+                <a href="##">
+                  <Icon key={id} id={id} />
+                </a>
+              );
+            })}
+          </IconContainer>
           <Copyright>Copyright © 2023 - FinanceLedger</Copyright>
-        </IconContainer>
+        </FooterWrapper>
       </Container>
     </FooterSection>
   );

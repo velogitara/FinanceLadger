@@ -7,6 +7,7 @@ import {
   AboutPictureTextWrapper,
   Picture,
   AboutContainer,
+  Img,
 } from './About.styled';
 import ArrowSvg from 'helpers/common-styles/ArrowSvg';
 
@@ -29,7 +30,7 @@ const About = () => {
               srcSet={`${People} 1x, ${People2x}.jpg 2x`}
               type="image/jpeg"
             />
-            <img src={People} alt="People" />
+            <Img src={People} alt="People" />
           </Picture>
           <AboutBox>
             <P>What you are looking for</P>

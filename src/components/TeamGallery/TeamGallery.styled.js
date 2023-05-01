@@ -1,27 +1,20 @@
 import styled from 'styled-components';
 
 export const TeamList = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  /* display: flex;
-  gap: 20px; */
   text-align: center;
-`;
-export const PersonName = styled.p`
-  margin-top: 15px;
 
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1.3;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
 `;
-export const PersonDescription = styled.span`
-  margin-top: 8px;
 
-  font-size: 18px;
-  line-height: 1.3;
-`;
 export const Overlay = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -58,15 +51,19 @@ export const Picture = styled.picture`
 `;
 
 export const IconContainer = styled.div`
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a:not(:last-of-type) {
+    margin-right: 25px;
+  }
 `;
 export const Svg = styled.svg`
-  margin-left: 25px;
   width: 35px;
   height: 35px;
   opacity: 1;
+  fill: #fff;
 
   cursor: pointer;
 
@@ -75,5 +72,29 @@ export const Svg = styled.svg`
   :hover {
     opacity: 0.8;
     transform: scale(1.1);
+  }
+`;
+export const PersonInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 0 30px;
+`;
+
+export const PersonName = styled.p`
+  font-size: 20px;
+  line-height: 1.35;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 1;
+  }
+`;
+export const PersonDescription = styled.span`
+  font-size: 16px;
+  line-height: 22px;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.39;
   }
 `;

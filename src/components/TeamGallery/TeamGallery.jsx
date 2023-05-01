@@ -8,6 +8,7 @@ import {
   Picture,
   IconContainer,
   Svg,
+  PersonInfo,
 } from './TeamGallery.styled';
 
 import sprite from '../../images/SocialIcons/sprite.svg';
@@ -46,8 +47,10 @@ const TeamGallery = () => {
             </Overlay>
           </Thumb>
 
-          <PersonName>{name}</PersonName>
-          <PersonDescription>{description}</PersonDescription>
+          <PersonInfo>
+            <PersonName>{name}</PersonName>
+            <PersonDescription>{description}</PersonDescription>
+          </PersonInfo>
         </TeamItem>
       ))}
     </TeamList>

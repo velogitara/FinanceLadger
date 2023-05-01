@@ -21,16 +21,25 @@ export const HeroInner = styled.div`
 
 export const H1 = styled.h1`
   font-weight: 600;
-  font-size: 55px;
-  line-height: 1.35;
-
-  margin-bottom: 16px;
-`;
-export const HeroText = styled.p`
   font-size: 40px;
   line-height: 1.35;
 
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 55px;
+    line-height: 1.37;
+  }
+`;
+export const HeroText = styled.p`
+  font-size: 26px;
+  line-height: 1.23;
+
   margin-bottom: 24px;
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 1.2;
+  }
 `;
 export const ReadMoreBtn = styled.button`
   display: inline-flex;

@@ -10,16 +10,39 @@ export const TextBox = styled.div`
 `;
 
 export const P = styled.p`
-  font-size: 18px;
-  line-height: 1.3;
-
   margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.37;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.38;
+  }
+
+  @media screen and (min-width: 1024px) {
+    line-height: 1.8;
+  }
 `;
 export const H2 = styled.h2`
-  font-size: 40px;
-  font-weight: 400;
   margin-bottom: 24px;
+
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.37;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 1.35;
+  }
+
+  @media screen and (min-width: 1024px) {
+    line-height: 1.2;
+  }
 `;
 export const Describe = styled(P)`
   margin-bottom: 36px;
+  @media screen and (min-width: 768px) {
+    line-height: 1.38;
+  }
 `;

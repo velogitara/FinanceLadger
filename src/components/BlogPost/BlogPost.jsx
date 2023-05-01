@@ -7,6 +7,7 @@ import {
   BlogContainer,
   Picture,
   BlogPictureTextWrapper,
+  BlogImg,
 } from './BlogPost.styled';
 
 import Blog from '../../images/home/blog.jpg';
@@ -29,7 +30,7 @@ const BlogPost = () => {
                 srcSet={`${Blog} 1x, ${Blog2x}.jpg 2x`}
                 type="image/jpeg"
               />
-              <img src={Blog} alt="Blog" />
+              <BlogImg src={Blog} alt="Blog" />
             </Picture>
           </div>
           <TextBox>

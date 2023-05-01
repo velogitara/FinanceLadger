@@ -9,15 +9,28 @@ export const ContactSection = styled.div`
   width: 100%;
 `;
 export const FormWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
   background: #f4f4f4;
-
-  overflow: hidden;
-  object-fit: cover;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 export const ContactImage = styled.div`
-  width: 50%;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+`;
+
+export const ContactPic = styled.picture`
+  overflow: hidden;
+`;
+
+export const ContactImg = styled.img`
+  width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    height: 353px;
+    object-fit: cover;
+  }
 `;

@@ -12,10 +12,11 @@ export const GlobalStyle = createGlobalStyle`
 }
 body {
   /* text-align: center; */
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  /* font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; */
   color: #212121;
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -41,5 +42,6 @@ a {
   padding: 0px;
   color: inherit; 
   text-decoration: inherit;
+  user-select: none;
 }
 `;

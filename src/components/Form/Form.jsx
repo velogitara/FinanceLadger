@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {
   FormContainer,
   H2,
+  InputWrapper,
   NameInput,
   EmailInput,
   ButtonSubmit,
@@ -65,35 +66,38 @@ const ContactForm = () => {
         <div hidden>
           <input name="bot-field" />
         </div>
-        <div>
-          <label htmlFor="firstName">
-            <NameInput
-              id="firstName"
-              type="text"
-              name="firstName"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.firstName}
-              placeholder="Enter your name"
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="email">
-            <EmailInput
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter email"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
-            />
-            {formik.touched.email && formik.errors.email ? (
-              <div style={{ color: 'red' }}>{formik.errors.email}</div>
-            ) : null}
-          </label>
-        </div>
+        <InputWrapper>
+          <div>
+            <label htmlFor="firstName">
+              <NameInput
+                id="firstName"
+                type="text"
+                name="firstName"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                s
+                value={formik.values.firstName}
+                placeholder="Enter your name"
+              />
+            </label>
+          </div>
+          <div>
+            <label htmlFor="email">
+              <EmailInput
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter email"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+              />
+              {formik.touched.email && formik.errors.email ? (
+                <div style={{ color: 'red' }}>{formik.errors.email}</div>
+              ) : null}
+            </label>
+          </div>
+        </InputWrapper>
         <ButtonSubmit
           type="submit"
           disabled={formik.isSubmitting}

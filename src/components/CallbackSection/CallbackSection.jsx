@@ -3,6 +3,7 @@ import {
   ContactSection,
   FormWrapper,
   ContactImage,
+  ContactImg,
   MainContainer,
 } from './CallbackSection.styled';
 
@@ -26,7 +27,7 @@ const CallbackSection = () => {
                 srcSet={`${Contact} 1x, ${Contact2x}.jpg 2x`}
                 type="image/jpeg"
               />
-              <img src={Contact} alt="contact" />
+              <ContactImg src={Contact} alt="contact" />
             </picture>
           </ContactImage>
           <ContactForm />

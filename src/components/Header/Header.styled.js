@@ -13,9 +13,11 @@ export const HeaderBox = styled.header`
 `;
 
 export const HeaderInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media screen and (min-width: 768px) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 `;

@@ -28,12 +28,15 @@ export const Svg = styled.svg`
   width: 35px;
   height: 35px;
   opacity: 1;
+  fill: #fff;
 
   cursor: pointer;
 
   transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1),
     opacity 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
   :hover {
+    fill: #28a745;
+
     opacity: 0.8;
     transform: scale(1.1);
   }

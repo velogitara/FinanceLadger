@@ -30,6 +30,6 @@ export const Btn = styled.button`
   transition: transform 250ms ease-in-out;
   :hover {
     transform: scale(1.01);
-    box-shadow: 0px 0px 0px 3px #000000;
+    box-shadow: 3px 1px 3px 1px #000000;
   }
 `;

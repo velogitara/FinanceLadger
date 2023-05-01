@@ -9,38 +9,59 @@ export const BlogContainer = styled(Container)`
   padding: 0;
 `;
 export const BlogPictureTextWrapper = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-
-  overflow: hidden;
-  object-fit: cover;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 `;
 export const Picture = styled.picture`
   /* width: 50%; */
 `;
+export const BlogImg = styled.img`
+  width: 100%;
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    height: 493px;
+    object-fit: cover;
+  }
+`;
+
 export const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   padding: 80px 0 86px 20px;
-  max-width: 50%;
 
   font-weight: 400;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    max-width: 50%;
+    padding: 80px 20px 20px;
+  }
 `;
 
 export const P = styled.p`
   margin-bottom: 24px;
 
-  font-size: 18px;
-  line-height: 1.35;
+  font-size: 16px;
+  line-height: 1.37;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.39;
+  }
 `;
 export const H2 = styled.h2`
   margin-bottom: 24px;
 
-  font-size: 40px;
-  line-height: 1.35;
+  font-size: 32px;
+  line-height: 1.37;
+  font-weight: 400;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 1.2;
+  }
 `;
 export const ReadBtn = styled(ReadMoreBtn)`
   color: inherit;

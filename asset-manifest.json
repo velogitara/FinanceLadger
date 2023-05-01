@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3b46366d.css",
-    "main.js": "/static/js/main.5cc1bb07.js",
+    "main.js": "/static/js/main.5cf6264a.js",
     "static/media/showcase@2x.jpg": "/static/media/showcase@2x.73c58f9aec29be2efd5a.jpg",
     "static/media/people@2x.jpg": "/static/media/people@2x.025e71c2eb8b92a53d5b.jpg",
     "static/media/people@2x.webp": "/static/media/people@2x.b884c02c969f0b02cc7a.webp",
@@ -43,15 +43,15 @@
     "static/media/person3.webp": "/static/media/person3.4fbabcfea9687f80aef9.webp",
     "static/media/cases2.jpg": "/static/media/cases2.855b02a74ffed4538fb1.jpg",
     "static/media/person2.webp": "/static/media/person2.95a0a7b91dc6ac12186c.webp",
-    "static/media/sprite.svg": "/static/media/sprite.a823439c21347cea5b7b284866d693a5.svg",
+    "static/media/sprite.svg": "/static/media/sprite.5497d11a5b4dfca57d10d3ed51d61945.svg",
     "index.html": "/index.html",
     "static/media/FinanceLogo.svg": "/static/media/FinanceLogo.363b05ae322b0292ca66195397e976a0.svg",
     "static/media/arrowReadMoreButton.svg": "/static/media/arrowReadMoreButton.4bcb35f4630680cafccc8a13489f5cd7.svg",
     "main.3b46366d.css.map": "/static/css/main.3b46366d.css.map",
-    "main.5cc1bb07.js.map": "/static/js/main.5cc1bb07.js.map"
+    "main.5cf6264a.js.map": "/static/js/main.5cf6264a.js.map"
   },
   "entrypoints": [
     "static/css/main.3b46366d.css",
-    "static/js/main.5cc1bb07.js"
+    "static/js/main.5cf6264a.js"
   ]
 }

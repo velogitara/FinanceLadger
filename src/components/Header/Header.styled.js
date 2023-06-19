@@ -7,7 +7,7 @@ export const HeaderBox = styled.header`
   z-index: 10;
   padding: 32px 0;
 
-  background-color: ${props => (props.active ? 'rgba(0,0,0,0.3)' : '')};
+  background-color: ${props => (props.active ? 'rgba(0,0,0,0.8)' : '')};
   opacity: ${props => (props.active ? '0.8' : '')};
   transition: background-color 0.5s linear, opacity 0.5s linear;
 `;

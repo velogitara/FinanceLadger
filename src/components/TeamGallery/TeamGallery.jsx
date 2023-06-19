@@ -38,7 +38,7 @@ const TeamGallery = () => {
               <IconContainer>
                 {icons.map(id => {
                   return (
-                    <a href="##">
+                    <a href="##" key={id}>
                       <Icon key={id} id={id} />
                     </a>
                   );

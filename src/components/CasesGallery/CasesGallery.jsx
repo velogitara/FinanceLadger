@@ -1,6 +1,6 @@
 import 'photoswipe/dist/photoswipe.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
-import { GridBox, Img, Overlay } from './CasesGallery.styled';
+import { GridBox, Img } from './CasesGallery.styled';
 
 import cases1 from '../../images/cases/cases1.jpg';
 import cases1_2x from '../../images/cases/cases1@2x.jpg';

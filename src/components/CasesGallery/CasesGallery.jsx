@@ -61,7 +61,7 @@ const CasesGallery = () => {
                     <Img
                       style={smallItemStyles}
                       ref={ref}
-                      // onClick={open}
+                      /* onClick={open}*/
                       src={img}
                       alt={id}
                     />

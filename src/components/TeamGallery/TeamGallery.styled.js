@@ -9,6 +9,15 @@ export const TeamList = styled.ul`
     grid-gap: 20px;
   }
 `;
+export const Thumb = styled.div`
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  :hover {
+    transform: scale(1.04);
+  }
+`;
 
 export const Overlay = styled.div`
   display: flex;
@@ -31,16 +40,6 @@ export const Overlay = styled.div`
 export const TeamItem = styled.li`
   :hover ${Overlay} {
     transform: translateY(0);
-  }
-`;
-
-export const Thumb = styled.div`
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  :hover {
-    transform: scale(1.04);
   }
 `;
 

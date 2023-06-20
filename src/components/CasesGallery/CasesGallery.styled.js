@@ -11,17 +11,49 @@ export const GridBox = styled.div`
   }
 `;
 
-export const Img = styled.img`
-  transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  :hover {
-    @media screen and (min-width: 768px) {
-      transform: scale(1.01);
+export const Thumb = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    :hover {
+      transform: scale(1.04);
     }
   }
 `;
 
 export const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 1);
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @media screen and (min-width: 768px) {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    transition: background-color 500ms ease-in-out;
+  }
+`;
+
+export const GalleryItem = styled.div`
+  :hover ${Overlay} {
+    @media screen and (min-width: 768px) {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+`;
+export const Img = styled.img`
+  /* transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1); */
+  /* :hover ${Overlay} {
+    @media screen and (min-width: 768px) {
+      transform: scale(1.03);
+    }
+  } */
 `;
